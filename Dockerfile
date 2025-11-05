@@ -2,7 +2,8 @@ FROM python:3.12-alpine
 WORKDIR /app
 COPY . .
 # ADD
-# RUN
+RUN python -m venv venv
+RUN ./venv/bin/pip install -r requirements.txt
 # ENV
 # EXPOSE port
 # USER
