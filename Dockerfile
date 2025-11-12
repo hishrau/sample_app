@@ -5,7 +5,7 @@ COPY . .
 RUN python -m venv venv
 RUN ./venv/bin/pip install -r requirements.txt
 ENV DB_NAME=sample_app.db
-# EXPOSE port
+EXPOSE 9000
 # USER
 # CMD
 # ENTRYPOINT
