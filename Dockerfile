@@ -6,6 +6,7 @@ RUN python -m venv venv
 RUN ./venv/bin/pip install -r requirements.txt
 ENV DB_NAME=sample_app.db
 EXPOSE 9000
-# USER
+RUN addgroup app && adduser -S -G app app
+USER app
 # CMD
 # ENTRYPOINT
